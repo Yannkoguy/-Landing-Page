@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    background-color: aqua;
+}
+
+
+.container1 {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    background-color: #1F2937;
+    height: 400px;
+    
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+    padding: 10px;
+    background-color: #1F2937;
+    height: 30px;
+    
+
+
+
+}
+.right-links{
+    display: flex;
+     justify-content: flex-end;
+     gap: 10px;
+     margin-right: 10px;
+     color: aliceblue;
+     background-color: #1F2937;
+     
+}
+.lien {
+    background-color: #1F2937;
+}
+
+.logo{
+    font-size: 25px;
+    color: aliceblue;
+    font-weight: bold;
+    font-style: italic;
+    background-color: #1F2937;
+}
