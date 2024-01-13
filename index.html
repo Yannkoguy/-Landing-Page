@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ivoire-Food</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+    <script src="Mapjs/restaurant.js"></script>
 </head>
 <body>
     <!--La première section-->
@@ -15,13 +24,126 @@
            IVOIRE-FOOD 
         </div>
         <!--Lien a droite -->
-        <div class="right-links">
-            <div class="lien">lien1</div>
-            <div class="lien">lien2</div>
-            <div class="lien">lien3</div>
+        <div class="right-links" style="text-align: center;">
+            <div class="lien">Acceuil</div>
+            <div class="lien">Recettes</div>
+            <div class="lien">La Carte</div>  
         </div>
-        
-     </div>
-  </div>  
+     </div>   
+  </div>
+  <div class="presentation">
+    <div class="block">
+        <div class="b-block1">
+            <p style="color: white; font-size: 29px; font-weight:bold;">Bienvenue sur ivoire-food, votre site dédié à l'art culinaire ivoirien</p>
+        </div>
+        <div class="b-block2">
+            <p style="color: white; font-size: 19px;font-style: italic; font-weight: bolder;">
+                Découvrez et partagez l'authenticité des saveurs exquises de la cuisine ivoirienne.
+            </p>
+        </div>
+        <div class="b-block3">
+            <button class="button">Voire la carte</button>
+        </div>
+    </div>
+    <div class="block">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dRFsON9OWUA?si=qqc7q9O1NXNuRt2M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>    
+</div> 
+<div class="text1">
+    <p style="color: black;font-size: 29px; font-weight: bold; font-style: italic;">Les plats préférés du peuple ivoirien</p>
+</div>
+<div class="container-plats">
+    <div class="plats">
+        <div class="p-plats1"><img src="imgs/IMG_2304.jpg" alt="kedjenou de poloulet"></div>
+        <div class="p-plats2">Poulet kedjenou</div>
+    </div>
+    <div class="plats">
+        <div class="p-plats1"><img src="imgs/IMG_1261.jpg" alt=""></div>
+        <div class="p-plats2">Attiéké Poisson</div>
+    </div>
+    <div class="plats">
+        <div class="p-plats1"><img src="imgs/Alloco-poisson-piment.jpg" alt="alloco-poisson"></div>
+        <div class="p-plats2">Alloco</div>
+    </div>
+    <div class="plats">
+        <div class="p-plats1"><img src="imgs/Sauce-graine-1-612x500.jpg" alt="foutou-sauce-graine"></div>
+        <div class="p-plats2">Foutou  sauce graine </div>
+    </div>
+</div> 
+<div class="container-recettes">
+    <div class="recettes-text">
+        <div class="r-text1">
+            <h2 id = "h2"style="color: orange; font-weight: bold; font-style: italic;">Recettes</h2>
+          <h3 style="color: white; text-align:justify; font-style: italic;">
+            Les recettes revêtent une importance fondamentale en cuisine, allant bien au-delà de simples instructions pour la préparation des repas. Elles incarnent des héritages familiaux, des témoignages culturels et des formes d'expression artistique. Ces guides culinaires ne se limitent pas à indiquer les étapes de cuisson ; ils sont également des porteurs d'histoires, reflétant l'identité et l'histoire d'une communauté à travers ses saveurs distinctes. Les recettes favorisent la créativité en offrant une base sur laquelle les cuisiniers peuvent improviser, tout en préservant l'essence authentique de chaque cuisine. Au-delà de la simple préparation de repas, les recettes renforcent les liens sociaux et familiaux, créant des moments de partage et de convivialité autour de la table. En somme, ces guides culinaires sont essentiels pour préserver la diversité gastronomique, liant les individus à leur patrimoine tout en inspirant de nouvelles explorations culinaires.
+          </h3>
+        </div>
+        <div class="r-text2">
+            <button class="button1">En savoir plus</button>
+        </div>
+    </div>
+    <div class="recettes-photo">
+       <img src="imgs/pexels-roman-odintsov-4551832.jpg" alt="">
+    </div>
+</div>
+<div class="container-map">
+    <div class="map1"> <div class="restos">
+        <h2 style="color: orange;font-weight: bold; padding-bottom: 10px; font-style: italic;">Meilleurs Resto</h2>
+        <p style="color: white; font-weight: bold; text-align: justify; font-style: italic;">Les restaurants ivoiriens offrent une expérience culinaire riche et diversifiée, capturant les saveurs authentiques de la gastronomie ivoirienne. Ces établissements sont des joyaux gastronomiques où les convives peuvent se délecter des délices de la cuisine ivoirienne, réputée pour son mélange subtil d'épices, d'herbes fraîches et de techniques de cuisson traditionnelles. Des plats emblématiques tels que le fameux attiéké avec poisson braisé, le délicieux foutou banane avec sauce graine, ou encore le succulent aloko, des bananes plantains frites, sont autant de trésors gustatifs à découvrir. Les restaurants ivoiriens créent une atmosphère chaleureuse, souvent imprégnée de musique et de convivialité, offrant ainsi une expérience gastronomique qui va au-delà de la simple dégustation, transportant les convives dans un voyage authentique au cœur de la culture ivoirienne.</p>
+    </div></div>
+
+    
+    <div class="map2">
+        <div id="map"></div>
+    </div>
+    
+</div>
+<div class="container-footer">
+    <div class="header">
+        <!--Lien a gauche-->    
+            <div class="logo">
+               IVOIRE-FOOD 
+            </div>
+            <!--Lien a droite -->
+            <div class="right-links" style="text-align: center;">
+                <div class="lien"></div>
+                <div class="lien"></div>
+                <div class="lien"></div>  
+            </div>
+         </div>   
+</div>
+
+<script>
+
+    var map = L.map('map').setView([5.329566, -4.024747], 12);
+
+     var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+     //   var mylayer = L.geoJSON(restaurant , {
+    //onEachFeature: function(feature,layer){
+     //   layer.bindPopup(feature.properties.nom)
+     // }
+    
+//}).addTo(map);
+
+
+//Marker 
+//Gorges
+var Marker1 = L.marker([5.320048894271044, -4.011620786015595]).addTo(map).bindPopup("<h3 class ='text-center'>Chez Georges Resto</h3><img class ='ims' src='Dossier-image/Chez Georges.jpg' width='200px'>");
+//Tuan
+var Marker2 = L.marker([5.323434303539127, -4.014814600775112]).addTo(map).bindPopup("<h3 class ='text-center'>Restaurant Vietnamien Tuan</h3><img class ='ims' src='Dossier-image/Tuan.jpg' width='200px'>");
+//African Queen,s
+var Marker3 = L.marker([5.323993953594695, -4.0152114278749185]).addTo(map).bindPopup("<h3 class ='text-center'>Noom Restaurant</h3><img class ='ims' src='Dossier-image/1.jpg' width='200px'>");
+//Les Héveas
+var Marker4 = L.marker([5.328161491266239, -4.023827895329996]).addTo(map).bindPopup("<h3 class ='text-center'>Les Héveas</h3><img class ='ims' src='Dossier-image/hevea-italian-restaurant.jpg' width='200px'>");
+//La Dolce Vita 
+var Marker5 = L.marker([5.365634007881393, -3.969027270294122]).addTo(map).bindPopup("<h3 class ='text-center'>La Dolce Vita </h3><img class ='ims' src='Dossier-image/La dolce Vita.jpg' width='200px'>");
+
+
+</script>
 </body>
-</html>
+
+
+</html
